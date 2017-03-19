@@ -53,8 +53,7 @@ function newKeywords() {
 function fire_blocker() {
     hot_weibo_blocker();
     index_blocker();
-    $("#app").off('DOMNodeInserted').on('DOMNodeInserted', new_feed_handler);
-    $(".card-list").off('DOMNodeInserted').on('DOMNodeInserted', new_feed_handler);
+    $("#app, .card-list").off('DOMNodeInserted').on('DOMNodeInserted', new_feed_handler);
 }
 
 // 处理首页
@@ -123,4 +122,4 @@ function new_feed_handler(e) {
     }
 }
 
-setTimeout(init_blocker, 500);
+setTimeout(init_blocker, 3000);
