@@ -95,9 +95,6 @@ function hot_weibo_blocker() {
 
 // 处理新载入的内容
 function new_feed_handler(e) {
-
-    alert("launch!");
-
     var element = e.target;
     var t = $(element).find(".weibo-text");
     if (t != undefined) {
