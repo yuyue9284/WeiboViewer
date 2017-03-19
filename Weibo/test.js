@@ -20,6 +20,7 @@ function init_blocker() {
     if (navbar.length == 0) {
         var tnav = $('<div class="home-sub-nav layout-box" data-node="homeSubNav"></div>');
         $('body').prepend(tnav);
+        tnav.css("position", "fixed");
     }
     $(".home-sub-nav.layout-box").append(button);
 
