@@ -5,12 +5,12 @@ document.head.appendChild(jqry);
 
 
 var block = ["女权", "tf", "TF", "Tf", "魅族", "萨德", "王源", "易烊千玺", "王俊凯", "周杰伦", "直男", "三生三世", "习近平", "乐天", "红米"];
-var button = $("<button class='item box-col' id = 'add_keywords'>关键词</button>\
-               <button class='item box-col' id = 'Blocker'>Block!</button>");
 
 function init_blocker() {
+    var button = $("<button class='item box-col' id = 'add_keywords'>关键词</button>\
+                   <button class='item box-col' id = 'Blocker'>Block!</button>");
     var navbar = $(".home-sub-nav.layout-box");
-    if (navbar == undefined) {
+    if (navbar.length == 0) {
         var tnav = $('<div class="home-sub-nav layout-box" data-node="homeSubNav"></div>');
         $('body').prepend(tnav);
     }
@@ -100,7 +100,7 @@ function new_feed_handler(e) {
     }
 }
 
-setTimeout(init_blocker(), 3000);
+setTimeout(init_blocker, 3000);
 
 
 
