@@ -100,7 +100,7 @@ function hot_weibo_blocker() {
     //     return $(this);
     // });
 
-    var lst = $(".card.m-panel.card9.weibo-member").map(function() {
+    var lst = $(".card.m-panel.card9").map(function() {
         return $(this);
     });
 
@@ -122,31 +122,12 @@ function hot_weibo_blocker() {
 // 处理新载入的内容
 function new_feed_handler(e) {
     var element = e.target;
-    // var t = $(element).find(".weibo-text");
-
-    var t = $(element).find(".card.m-panel.card9.weibo-member");
+    var t = $(element)
     if (t != undefined) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = t.text();
             if (content.includes(blocklist[j])) {
-                // t.parents().eq(4).css("display", "none");
-                // t.css("color", "red");
                 t.css("display", "none");
-                return;
-            }
-        }
-    }
-
-    var t = $(element).find(".card.card9.line-around");
-    if (t != undefined) {
-        for (var j = blocklist.length - 1; j >= 0; j--) {
-            var content = t.text();
-            if (content.includes(blocklist[j])) {
-
-                // t.parents().eq(1).css("display", "none");
-                // t.css("color", "red");
-                t.css("display", "none");
-
                 return;
             }
         }
