@@ -20,6 +20,13 @@ function init_blocker() {
     if (navbar.length == 0) {
         var tnav = $('<div class="home-sub-nav layout-box" data-node="homeSubNav"></div>');
         $('body').prepend(tnav);
+        tnav.css("position", "fixed");
+
+        // 注入css增加对按钮的支持
+        var css_link = $('<link href="//h5.sinaimg.cn/weibocn/v6/css/lib/base-d1c7f99e51e81f2aec863e6539d97dbb.css" type="text/css" rel="stylesheet">\
+                          <link href="//h5.sinaimg.cn/weibocn/v6/css/card/cards-9babdfd7da6f88b20fc47e0d79a2977d.css" type="text/css" rel="stylesheet">\
+                         <link href="//h5.sinaimg.cn/weibocn/v6/css/mod/mods.all-3ced9f518a7d802418d57152b529c1fa.css" type="text/css" rel="stylesheet">');
+        $("head").append(css_link);
     }
     $(".home-sub-nav.layout-box").append(button);
 
@@ -58,15 +65,26 @@ function fire_blocker() {
 
 // 处理首页
 function index_blocker() {
-    var lst = $(".default-content.txt-xl").map(function() {
+    // 定位微博
+
+    // var lst = $(".default-content.txt-xl").map(function() {
+    //     return $(this);
+    // });
+
+    var lst = $(".card.card9.line-around").map(function() {
         return $(this);
     });
+
     for (var i = lst.length - 1; i >= 0; i--) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = lst[i].text();
             if (content.includes(blocklist[j])) {
-                lst[i].parents().eq(1).css("display", "none");
+
+                // lst[i].parents().eq(1).css("display", "none");
                 // lst[i].css('color', 'red');
+
+                lst[i].css("display", "none");
+
                 break;
             }
         }
@@ -76,14 +94,23 @@ function index_blocker() {
 
 // 处理热门微博
 function hot_weibo_blocker() {
-    var lst = $(".weibo-text").map(function() {
+
+    // card m - panel card9 weibo - member
+    // var lst = $(".weibo-text").map(function() {
+    //     return $(this);
+    // });
+
+    var lst = $(".card.m-panel.card9.weibo-member").map(function() {
         return $(this);
     });
+
     for (var i = lst.length - 1; i >= 0; i--) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = lst[i].text();
             if (content.includes(blocklist[j])) {
-                lst[i].parents().eq(4).css("display", "none");
+
+                lst[i].css("display", "none");
+                // lst[i].parents().eq(4).css("display", "none");
                 // lst[i].css('color', 'red');
                 break;
             }
@@ -95,27 +122,31 @@ function hot_weibo_blocker() {
 // 处理新载入的内容
 function new_feed_handler(e) {
     var element = e.target;
-    var t = $(element).find(".weibo-text");
+    // var t = $(element).find(".weibo-text");
+
+    var t = $(element).find(".card.m-panel.card9.weibo-member");
     if (t != undefined) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = t.text();
             if (content.includes(blocklist[j])) {
-                t.parents().eq(4).css("display", "none");
-
+                // t.parents().eq(4).css("display", "none");
                 // t.css("color", "red");
+                t.css("display", "none");
                 return;
             }
         }
     }
 
-    var t = $(element).find(".default-content.txt-xl");
+    var t = $(element).find(".card.card9.line-around");
     if (t != undefined) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = t.text();
             if (content.includes(blocklist[j])) {
-                t.parents().eq(1).css("display", "none");
 
+                // t.parents().eq(1).css("display", "none");
                 // t.css("color", "red");
+                t.css("display", "none");
+
                 return;
             }
         }

@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIWebView *webpage;
+- (IBAction)back:(id)sender;
+- (IBAction)refresh:(id)sender;
+
 
 @end
 
@@ -20,9 +24,8 @@
     NSString *website = @"https://weibo.com";
     NSURL *url = [NSURL URLWithString:website];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [webpage loadRequest:request];
-    
-    webpage.delegate = self;
+    [self.webpage loadRequest:request];
+    self.webpage.delegate = self;
     
 }
 
@@ -41,4 +44,11 @@
 }
 
 
+- (IBAction)back:(id)sender {
+    [self.webpage goBack];
+}
+
+- (IBAction)refresh:(id)sender {
+    [self.webpage reload];
+}
 @end

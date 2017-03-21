@@ -10,7 +10,6 @@
 
 @interface ViewController : UIViewController<UIWebViewDelegate>
 {
-    IBOutlet UIWebView *webpage;
 }
 @end
 
