@@ -122,7 +122,7 @@ function hot_weibo_blocker() {
 // 处理新载入的内容
 function new_feed_handler(e) {
     var element = e.target;
-    var t = $(element)
+    var t = $(element);
     if (t != undefined) {
         for (var j = blocklist.length - 1; j >= 0; j--) {
             var content = t.text();
