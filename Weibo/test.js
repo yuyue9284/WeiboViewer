@@ -21,6 +21,12 @@ function init_blocker() {
         var tnav = $('<div class="home-sub-nav layout-box" data-node="homeSubNav"></div>');
         $('body').prepend(tnav);
         tnav.css("position", "fixed");
+
+        // 注入css增加对按钮的支持
+        var css_link = $('<link href="//h5.sinaimg.cn/weibocn/v6/css/lib/base-d1c7f99e51e81f2aec863e6539d97dbb.css" type="text/css" rel="stylesheet">\
+                          <link href="//h5.sinaimg.cn/weibocn/v6/css/card/cards-9babdfd7da6f88b20fc47e0d79a2977d.css" type="text/css" rel="stylesheet">\
+                         <link href="//h5.sinaimg.cn/weibocn/v6/css/mod/mods.all-3ced9f518a7d802418d57152b529c1fa.css" type="text/css" rel="stylesheet">');
+        $("head").append(css_link);
     }
     $(".home-sub-nav.layout-box").append(button);
 
@@ -103,7 +109,7 @@ function hot_weibo_blocker() {
             var content = lst[i].text();
             if (content.includes(blocklist[j])) {
 
-            	lst[i].css("display", "none");
+                lst[i].css("display", "none");
                 // lst[i].parents().eq(4).css("display", "none");
                 // lst[i].css('color', 'red');
                 break;
