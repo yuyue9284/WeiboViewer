@@ -3,7 +3,7 @@ jqry.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jqu
 document.head.appendChild(jqry);
 
 var bl_list = document.createElement('script');
-bl_list.setAttribute('src', '');
+bl_list.setAttribute('src', 'https://rawgit.com/yuyue9284/WeiboViewer/dev/Weibo/block_list.js');
 document.head.appendChild(bl_list);
 
 // var blocklist = ["tf", "TF", "Tf", "王源", "易烊千玺", "王俊凯"];

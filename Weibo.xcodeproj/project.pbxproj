@@ -15,7 +15,7 @@
 		B03863C31E77965B0075BA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B03863C11E77965B0075BA3D /* LaunchScreen.storyboard */; };
 		B03863CE1E77965B0075BA3D /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B03863CD1E77965B0075BA3D /* WeiboTests.m */; };
 		B03863D91E77965B0075BA3D /* WeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B03863D81E77965B0075BA3D /* WeiboUITests.m */; };
-		B03863E71E779E030075BA3D /* test.js in Resources */ = {isa = PBXBuildFile; fileRef = B03863E61E779E030075BA3D /* test.js */; };
+		B03B0E2A1E81FE9200416691 /* blocker.js in Resources */ = {isa = PBXBuildFile; fileRef = B03B0E291E81FE9200416691 /* blocker.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		B03863D41E77965B0075BA3D /* WeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B03863D81E77965B0075BA3D /* WeiboUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeiboUITests.m; sourceTree = "<group>"; };
 		B03863DA1E77965B0075BA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B03863E61E779E030075BA3D /* test.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = test.js; sourceTree = "<group>"; };
+		B03B0E291E81FE9200416691 /* blocker.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = blocker.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B03863B61E77965B0075BA3D /* AppDelegate.h */,
-				B03863E61E779E030075BA3D /* test.js */,
+				B03B0E291E81FE9200416691 /* blocker.js */,
 				B03863B71E77965B0075BA3D /* AppDelegate.m */,
 				B03863B91E77965B0075BA3D /* ViewController.h */,
 				B03863BA1E77965B0075BA3D /* ViewController.m */,
@@ -252,8 +252,8 @@
 			files = (
 				B03863C31E77965B0075BA3D /* LaunchScreen.storyboard in Resources */,
 				B03863C01E77965B0075BA3D /* Assets.xcassets in Resources */,
-				B03863E71E779E030075BA3D /* test.js in Resources */,
 				B03863BE1E77965B0075BA3D /* Main.storyboard in Resources */,
+				B03B0E2A1E81FE9200416691 /* blocker.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

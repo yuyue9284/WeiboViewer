@@ -33,7 +33,7 @@
 - (void) webViewDidFinishLoad:(UIWebView *)wb
 {
     //Execute javascript method or pure javascript if needed
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"js"];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"blocker" ofType:@"js"];
     NSString *jsString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
     [wb stringByEvaluatingJavaScriptFromString:jsString];
 }
