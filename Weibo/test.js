@@ -2,9 +2,11 @@ var jqry = document.createElement('script');
 jqry.setAttribute('src', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js');
 document.head.appendChild(jqry);
 
+var bl_list = document.createElement('script');
+bl_list.setAttribute('src', '');
+document.head.appendChild(bl_list);
 
-
-var blocklist = ["tf", "TF", "Tf", "王源", "易烊千玺", "王俊凯"];
+// var blocklist = ["tf", "TF", "Tf", "王源", "易烊千玺", "王俊凯"];
 
 // 初始化
 function init_blocker() {
